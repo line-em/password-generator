@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Password Generator</title>
+   <link rel="stylesheet" href="./style.css">
+
+   <!--favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="./image/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./image/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+
+   <!--fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/phosphor-icons" async></script>
+</head>
+
+<body>
+   <header>
+      <section>
+         <h1><i class="ph-lock-key"></i> Generate a random password.</h1>
+         <section class="info">Get a safer and more secure password here, with letters, number and symbols.</section>
+      </section>
+      <section>
+         <!-- Set Password Length -->
+         <input type="number" id="userLength" placeholder="10" min="10">
+         <button onclick="generatePassword(getLength())">Generate Password</button>
+      </section>
+   </header>
+   <main>
+      <section class="info">
+         <p>Click on the <i class="ph-copy-bold"></i> symbol to copy the password!</p>
+      </section>
+      <!-- Generated Passwords -->
+      <section>
+         <input type="text" name="" id="pw-element-1" placeholder="---">
+         <button onClick="copyPassword(pwBox1)"><i class="ph-copy-bold"></i></button>
+      </section>
+      <section>
+         <input type="text" name="" id="pw-element-2" placeholder="---">
+         <button onClick="copyPassword(pwBox2)"><i class="ph-copy-bold"></i></button>
+      </section>
+      <section>
+         <input type="text" name="" id="pw-element-3" placeholder="---">
+         <button onClick="copyPassword(pwBox3)"><i class="ph-copy-bold"></i></button>
+      </section>
+      <section>
+         <input type="text" name="" id="pw-element-4" placeholder="---">
+         <button onClick="copyPassword(pwBox4)"><i class="ph-copy-bold"></i></button>
+      </section>
+      <script src="./main.js" async></script>
+   </main>
+   <footer>
+      <p>Made with love and tea by <a href="https://github.com/line-em">@line-em.</a></p>
+   </footer>
+
+</body>
+
+</html>
