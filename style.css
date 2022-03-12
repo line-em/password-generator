@@ -57,6 +57,7 @@ footer {
 }
 
 .info {
+	width: 100%;
 	border-bottom: 2px var(--transparency) solid;
 	margin: 0.5rem;
 	padding: 1rem;
