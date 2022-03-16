@@ -13,10 +13,13 @@ This project was made with vanilla HTML, JS and CSS. It is responsive, but if yo
 
 ## To-do
 
-- Polish CSS
-- Add a checkbox to customize the passwords, with letters/numbers/symbols.
+[] Polish CSS
+[] Add a checkbox to customize the passwords, with letters/numbers/symbols.
+[x] Add Event Listeners
+[x] Add Alert
 
 ## Changelog
 
 - 1.0 - Initial commit.
 - 1.1 - Testing on different browsers.
+- 1.2 - Added Event Listeners and Alerts with if/else.

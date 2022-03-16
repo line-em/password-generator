@@ -30,29 +30,29 @@
       <section>
          <!-- Set Password Length -->
          <input type="number" id="userLength" placeholder="10" min="10">
-         <button onclick="generatePassword(getLength())">Generate Password</button>
+         <button id="generate-password">Generate Password</button>
       </section>
    </header>
    <main>
       <section class="info">
-         <p>Click on the <i class="ph-copy-bold"></i> symbol to copy the password!</p>
+         <p id="copy-info">Click on the <i class="ph-copy-bold"></i> symbol to copy the password!</p>
       </section>
       <!-- Generated Passwords -->
       <section>
          <input type="text" name="" id="pw-element-1" placeholder="---">
-         <button onClick="copyPassword(pwBox1)"><i class="ph-copy-bold"></i></button>
+         <button id="pw-copy-1"><i class="ph-copy-bold"></i></button>
       </section>
       <section>
          <input type="text" name="" id="pw-element-2" placeholder="---">
-         <button onClick="copyPassword(pwBox2)"><i class="ph-copy-bold"></i></button>
+         <button id="pw-copy-2"><i class="ph-copy-bold"></i></button>
       </section>
       <section>
          <input type="text" name="" id="pw-element-3" placeholder="---">
-         <button onClick="copyPassword(pwBox3)"><i class="ph-copy-bold"></i></button>
+         <button id="pw-copy-3"><i class="ph-copy-bold"></i></button>
       </section>
       <section>
          <input type="text" name="" id="pw-element-4" placeholder="---">
-         <button onClick="copyPassword(pwBox4)"><i class="ph-copy-bold"></i></button>
+         <button id="pw-copy-4"><i class=" ph-copy-bold"></i></button>
       </section>
       <script src="./main.js" async></script>
    </main>
