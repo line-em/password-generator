@@ -83,3 +83,36 @@ copyBox3.addEventListener("click", function () {
 copyBox4.addEventListener("click", function () {
 	copyPassword(pwBox4);
 });
+
+// // CHANGE
+
+// const password = {
+// 	abcUppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+// 	abcLowercase: "abcdefghijklmnopqrstuvwxyz",
+// 	symbols: `~!@#$%^&*()_+-=[]\{}|;:'",/<>?`,
+// 	numbers: "0123456789"
+// };
+
+// //TO
+
+// const passwordAbcUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// const passwordAbcLowercase = "abcdefghijklmnopqrstuvwxyz";
+// const passwordSymbols = `~!@#$%^&*()_+-=[]\{}|;:'",/<>?`;
+// const passwordNumbers = "0123456789";
+
+// let passwordElements = "";
+
+// // THEN:
+
+// const buttonAbcUppercase = document.getElementById("abc-uppercase");
+
+// function getPasswordElements() {
+// 	if (buttonAbcUppercase === "checked") {
+// 		passwordElements += passwordAbcUppercase;
+// 	}
+// 	if (buttonAbcLowercase === "checked") {
+// 		passwordElements += passwordAbcLowercase;
+// 	} //ETC
+
+// 	return
+// }
