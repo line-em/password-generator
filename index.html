@@ -29,7 +29,21 @@
       </section>
       <section>
          <!-- Set Password Length -->
-         <input type="number" id="userLength" placeholder="10" min="10">
+         <div class="customizePassword">
+            <label>
+               <input type="checkbox" name="AbcLowercase" id="AbcLower" disabled checked> Lowercase Letters
+            </label>
+            <label>
+               <input type="checkbox" name="Symbols" id="Symbols" checked> Symbols
+            </label>
+            <label>
+               <input type="checkbox" name="AbcUppercase" id="AbcUpper" checked> Uppercase Letters
+            </label>
+            <label>
+               <input type="checkbox" name="Numbers" id="Numbers" checked> Numbers
+            </label>
+         </div>
+         <input type="number" id="userLength" placeholder="15" min="15">
          <button id="generate-password">Generate Password</button>
       </section>
    </header>

@@ -6,6 +6,11 @@
 	font-family: var(--mono);
 }
 
+::selection {
+	background-color: var(--melon);
+	color: var(--spacecadet);
+}
+
 :root {
 	--spacecadet: #28283e;
 	--lavender: #e7dada;
@@ -63,6 +68,11 @@ footer {
 	padding: 1rem;
 }
 
+.customizePassword {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 /* Elements */
 h1 {
 	font: 700 2.3rem var(--serif);
@@ -102,7 +112,7 @@ a:hover {
 
 /* Input */
 
-input {
+input:not([type="checkbox"]) {
 	letter-spacing: 0.1rem;
 	color: var(--spacecadet);
 	font: regular 1rem var(--mono);
@@ -119,11 +129,15 @@ input:focus {
 	outline: var(--transparency) solid 2px;
 	box-shadow: 1px 1px 10px var(--transparency);
 }
+
 input[type="number"] {
 	font-size: 1.15rem;
 	width: 6rem;
 	font-weight: 500;
 	margin: 1rem auto;
+}
+input {
+	accent-color: var(--transparency);
 }
 
 button {
@@ -165,10 +179,19 @@ header button {
 	h1 {
 		font: 700 1.9rem var(--serif);
 	}
-	input {
+	input:not([type="checkbox"]) {
 		width: 30ch;
 	}
 	button {
 		margin: 0;
+	}
+}
+@media screen and (max-width: 500px) {
+	.customizePassword {
+		display: grid;
+		grid-template-columns: 1fr;
+		place-items: center;
+		place-content: center;
+		margin-bottom: 1rem;
 	}
 }

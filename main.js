@@ -1,30 +1,30 @@
 // DOM & Variables
-let generatePasswordButton = document.getElementById("generate-password");
+const generatePasswordButton = document.getElementById("generate-password");
 
-let pwBox1 = document.getElementById("pw-element-1");
-let copyBox1 = document.getElementById("pw-copy-1");
-let pwBox2 = document.getElementById("pw-element-2");
-let copyBox2 = document.getElementById("pw-copy-2");
-let pwBox3 = document.getElementById("pw-element-3");
-let copyBox3 = document.getElementById("pw-copy-3");
-let pwBox4 = document.getElementById("pw-element-4");
-let copyBox4 = document.getElementById("pw-copy-4");
+const pwBox1 = document.getElementById("pw-element-1");
+const copyBox1 = document.getElementById("pw-copy-1");
+const pwBox2 = document.getElementById("pw-element-2");
+const copyBox2 = document.getElementById("pw-copy-2");
+const pwBox3 = document.getElementById("pw-element-3");
+const copyBox3 = document.getElementById("pw-copy-3");
+const pwBox4 = document.getElementById("pw-element-4");
+const copyBox4 = document.getElementById("pw-copy-4");
 
-let copyInfo = document.getElementById("copy-info");
+const copyInfo = document.getElementById("copy-info");
 
-const password = {
-	abcUppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-	abcLowercase: "abcdefghijklmnopqrstuvwxyz",
-	symbols: `~!@#$%^&*()_+-=[]\{}|;:'",/<>?`,
-	numbers: "0123456789"
+// Elements
+let checkedElements = {
+	lowercase: "abcdefghijklmnopqrstuvwxyz"
 };
 
-const passwordAllSymbols =
-	password.abcUppercase + password.abcLowercase + password.symbols + password.numbers;
+// Checkboxes
+const checkboxAbcUpper = document.getElementById("AbcUpper");
+const checkboxSymbols = document.getElementById("Symbols");
+const checkboxNumbers = document.getElementById("Numbers");
 
 // Clipboard Function
 function copyPassword(box) {
-	var copyText = box.value;
+	let copyText = box.value;
 	if (pwBox1.value === "") {
 		copyInfo.textContent = "❌ Please generate your passwords";
 		copyInfo.style.cssText =
@@ -40,7 +40,21 @@ function copyPassword(box) {
 
 // Password Generator Functions
 function getLength() {
-	return document.querySelector("input").valueAsNumber;
+	return document.getElementById("userLength").valueAsNumber;
+}
+
+function getPasswordCharacters() {
+	checkboxAbcUpper.checked === true
+		? (checkedElements["uppercase"] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+		: (checkedElements["uppercase"] = "");
+
+	checkboxSymbols.checked === true
+		? (checkedElements["symbols"] = `~!@#$%^&*()_+-=[]\{}|;:'",/<>?`)
+		: (checkedElements["symbols"] = "");
+
+	checkboxNumbers.checked === true
+		? (checkedElements["numbers"] = "0123456789")
+		: (checkedElements["numbers"] = "");
 }
 
 function generatePassword(length) {
@@ -52,19 +66,20 @@ function generatePassword(length) {
 
 function randomPassword(length) {
 	let result = "";
+	let elements = Object.values(checkedElements).join("");
 	if (isNaN(length)) {
-		length = 10;
+		length = 15;
 	}
 	for (i = 0; i < length; i++) {
-		result += passwordAllSymbols[Math.floor(Math.random() * passwordAllSymbols.length)];
+		result += elements[Math.floor(Math.random() * elements.length)];
 	}
-
 	return result;
 }
 
 // Event Listeners
 
 generatePasswordButton.addEventListener("click", function () {
+	getPasswordCharacters();
 	generatePassword(getLength());
 });
 
@@ -115,4 +130,3 @@ copyBox4.addEventListener("click", function () {
 // 	} //ETC
 
 // 	return
-// }
