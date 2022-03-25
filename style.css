@@ -119,7 +119,6 @@ input:not([type="checkbox"]) {
 	padding: 0.94rem;
 	border-radius: 38px;
 	width: 30ch;
-	/*display: block;*/
 	margin: 1rem;
 	background-color: var(--transparency);
 }
@@ -186,12 +185,47 @@ header button {
 		margin: 0;
 	}
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
+	header,
+	main,
+	footer {
+		width: 90vw;
+	}
+
+	input:not([type="checkbox"], [type="number"]) {
+		padding: 0.5rem;
+		width: 18ch;
+	}
+
+	input[type="number"] {
+		width: 10ch;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	header,
+	main {
+		padding: 0.8rem;
+	}
+
+	.info .ph-copy-bold {
+		padding: 0;
+	}
+
+	.info {
+		padding: 0.8rem;
+	}
+
 	.customizePassword {
 		display: grid;
 		grid-template-columns: 1fr;
 		place-items: center;
 		place-content: center;
 		margin-bottom: 1rem;
+	}
+
+	header button {
+		margin: 0;
+		font-size: 1rem;
 	}
 }
